@@ -21,5 +21,12 @@ class ApplicationController extends Controller
             'cassa' => 'required',
             'sd' => 'required|date'
         ]);
+        Auth::user()->applications()->create([
+            'language' => $validated['language'],
+            'cassa' => $validated['cassa'],
+            'sd' => $validated['sd'],
+            'status' => 'Новая'
+        ]);
+        return redirect()->route('dashboard');
     }
 }

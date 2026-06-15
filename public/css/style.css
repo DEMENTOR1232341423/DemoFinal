@@ -1,53 +1,53 @@
-*{
+@font-face {
+    font-family: 'pixelFont';
+    src: url('../fonts/JeuDePixel-Regular.otf') format('trueType');
+}
+@font-face {
+    font-family: 'goundFont';
+    src: url('../fonts/Caesar\ Dressing\ Cyrillic.otf') format('trueType');
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+body{
     margin: 0;
     padding: 0;
     border: 0;
-}
-body{
-    font-family: 'caesarlFont', sans-serif;
+    font-family: 'pixelFont';
+    height: 100vh;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
 }
 header{
-    font-family: 'pixelFont', sans-serif;
+    font-family: 'goundFont';
     display: grid;
-    grid-template-columns: 0.5fr 2fr 1fr 1fr;
-    .abb{
-        padding-top: 20px;
-    }
+    grid-template-columns: 0.5fr 4fr 1fr 1fr;
     img{
         height: 100px;
         width: 100px;
         border-radius: 100px;
         padding: 10px;
     }
+    .aaa{
+        padding-top: 20px;
+    }
 }
-a{
-    text-decoration: none;
-    color: black;
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    position: static;
 }
 .carousel{
-    width: 600px;
-    height: 450px;
     margin: 0 auto;
+    height: 450px;
+    width: 600px;
+    padding-top: 30px;
     img{
-        width: 600px;
         height: 450px;
+        width: 600px;
     }
-}
-@font-face {
-    font-family: 'pixelFont';
-    src: url('../fonts/JeuDePixel-Regular.otf') format('truetype');
-}
-@font-face {
-    font-family: 'caesarlFont';
-    src: url('../fonts/Caesar\ Dressing\ Cyrillic.otf') format('truetype');
-}
-@media screen and (max-width:390px){
-    .carousel{
-    width: 390px;
-    height: 260px;
-    img{
-        width: 390px;
-        height: 260px;
-    }
-}
 }

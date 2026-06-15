@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->enum('language', ['Английский', 'Китайский', 'Японский'])->default('Английский');
             $table->date('st');
-            $table->enum('cassa', ['Карта', 'Наличные'])->default('Карта');
+            $table->string('cassa');
             $table->string('status');
             $table->timestamps();
         });

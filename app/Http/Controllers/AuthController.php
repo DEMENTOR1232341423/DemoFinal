@@ -24,16 +24,16 @@ class AuthController extends Controller
     public function register(Request $request){
         $validated = $request->validate([
             'login' => 'required|min:6|unique:users',
-            'email' => 'required|email',
             'password' => 'required|min:8|confirmed',
-            'phone' => 'required',
             'db' => 'required|date',
-            'full_name' => 'required'
+            'email' => 'required"email',
+            'full_name' => 'required',
+            'phone' => 'required'
         ]);
         $validated['password'] = Hash::make($validated['password']);
         $user = Auth::create($validated);
 
-        
+        Auth::login($user);
         return redirect()->route('dashboard');
     }
     public function login(Request $request){
@@ -45,6 +45,6 @@ class AuthController extends Controller
             $request->session()->regenerate();
             return redirect()->route('dashboard');
         }
-        return back()->withErrors('login', 'Неверный логин или пароль!')->onlyInput('login');
+        return back()->withErrors(['login','Неправильный логин или пароль!'])->onlyInput('login');
     }
 }
