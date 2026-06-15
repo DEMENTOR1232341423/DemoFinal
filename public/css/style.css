@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body{
+    font-family: 'caesarlFont', sans-serif;
+}
+header{
+    font-family: 'pixelFont', sans-serif;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr;
+    .abb{
+        padding-top: 20px;
+    }
+    img{
+        height: 100px;
+        width: 100px;
+        border-radius: 100px;
+        padding: 10px;
+    }
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.carousel{
+    width: 600px;
+    height: 450px;
+    margin: 0 auto;
+    img{
+        width: 600px;
+        height: 450px;
+    }
+}
+@font-face {
+    font-family: 'pixelFont';
+    src: url('../fonts/JeuDePixel-Regular.otf') format('truetype');
+}
+@font-face {
+    font-family: 'caesarlFont';
+    src: url('../fonts/Caesar\ Dressing\ Cyrillic.otf') format('truetype');
+}
+@media screen and (max-width:390px){
+    .carousel{
+    width: 390px;
+    height: 260px;
+    img{
+        width: 390px;
+        height: 260px;
+    }
+}
+}
